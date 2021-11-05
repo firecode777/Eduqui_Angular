@@ -1,0 +1,95 @@
+  .container{
+  width: 250px;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.card-container {
+  width: 200px;
+  height: 300px;
+} 
+
+.card{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.card-container:hover .card{
+  transform: rotateY(180deg);
+}
+
+.card figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .front{
+background: cornflowerblue;
+color: white;
+text-align: center;
+}
+
+.card .back{
+  background: darkred;
+  color: aliceblue;
+  transform: rotateY(180deg);
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.example-card {
+  max-width: 1000px;
+  margin-left: 50px;
+}
+
+
+
+.content {
+  padding: 16px;
+  background:hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1)100%);
+ 
+
+}
+
+.content > mat-card {
+  width: 1000px;
+}
+.mat-button {
+  margin-top: 10px;  
+  width: 100%;
+  
+}
+
+.demo {
+  margin-bottom: 40px
+}

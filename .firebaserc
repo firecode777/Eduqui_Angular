@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "eduqui-7444d": {
+      "hosting": {
+        "eduqui-dois": [
+          "eduqui-7444d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "eduqui-7444d"
+  }
+}

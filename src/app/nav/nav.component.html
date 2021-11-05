@@ -1,0 +1,142 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <button
+      mat-button
+      class="menu-button"
+      routerLink="/home"
+      routerLinkActive="selected"
+    >
+      <mat-icon>home</mat-icon>
+      <span>Inicio</span>
+    </button>
+
+    <button
+      mat-button
+      class="menu-button"
+      routerLink="/perfil"
+      routerLinkActive="selected"
+    >
+      <mat-icon>person</mat-icon>
+      <span>Perfil</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/materia">
+      <mat-icon>book</mat-icon>
+      <span>Materias</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/exercicios">
+      <mat-icon>list_alt</mat-icon>
+      <span>Exercícios</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/ajuda">
+      <mat-icon>help</mat-icon>
+      <span>Ajuda</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/info">
+      <mat-icon>info</mat-icon>
+      <span>info</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <div class="menu-button" style="margin-left: 18px">
+      <mat-icon class="mr-8">brightness_5</mat-icon>
+      <div class="toggle, menu-button">
+        <mat-slide-toggle
+          [checked]="useDefault"
+          (change)="toggle($event)"
+        ></mat-slide-toggle>
+      </div>
+      <mat-icon style="margin-left: 8px">bedtime</mat-icon>
+    </div>
+
+    <button
+      class="menu-button"
+      mat-icon-button
+      style="margin-left: 18px"
+      routerLink=""
+    >
+      <mat-icon>account_circle</mat-icon>
+      <span>conta</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Eduqui</span>
+      <span style="flex: auto"></span>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <nav class="accordion-homepage" data-stats-ve="1" jslog="128111; track:click,impression">
+  <section class="parent has-image selected" data-id="3249465" data-stats-idx="1,10" jslog="129818; track:click,impression">
+    <h3 role="button" tabindex="0" aria-expanded="true" jslog="130285; track:click,impression">Introdução ao Google Web Designer<svg class="up" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+    </svg>
+    <svg class="down" viewBox="0 0 24 24">
+        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
+      </svg>
+    </h3>
+    <div class="overflow">
+      <div class="children" role="list" aria-hidden="false" style="margin-top: 0px;">
+        <div class="child" role="listitem">
+          <a class="article-link" href="/webdesigner/answer/3184833?hl=pt-BR&amp;ref_topic=3249465" jslog="130286; track:click,impression">Visão geral do Google Web Designer</a>
+        </div>
+        <div class="child" role="listitem">
+          <a class="article-link" href="/webdesigner/answer/3187129?hl=pt-BR&amp;ref_topic=3249465" jslog="130286; track:click,impression">A interface do Google Web Designer</a>
+        </div>
+        <div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7619729?hl=pt-BR&amp;ref_topic=3249465" jslog="130287; track:click,impression">Configurar o Google Web Designer</a>
+        </div>
+        <div class="child" role="listitem">
+          <a class="topic-link" href="/webdesigner/topic/7629738?hl=pt-BR&amp;ref_topic=3249465" jslog="130287; track:click,impression">Informações técnicas</a>
+        </div>
+        <div class="child" role="listitem">
+          <a class="article-link" href="/webdesigner/answer/6020356?hl=pt-BR&amp;ref_topic=3249465" jslog="130286; track:click,impression">Fazer download do Google Web Designer</a>
+        </div>
+        <div class="child" role="listitem">
+          <a class="article-link" href="/webdesigner/answer/3292832?hl=pt-BR&amp;ref_topic=3249465" jslog="130286; track:click,impression">Recursos adicionais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="parent has-image" data-id="3227692" data-stats-idx="2,10" jslog="129818; track:click,impression">
+    <h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Criar e modificar o conteúdo<svg class="up" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+    </svg>
+    <svg class="down" viewBox="0 0 24 24">
+      <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
+    </svg>
+  </h3>
+  <div class="overflow">
+    <div class="children" role="list" aria-hidden="true" style="margin-top: -272px; display: none;">
+      <div class="child" role="listitem">
+        <a class="topic-link" href="/webdesigner/topic/7662033?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Noções básicas do documento</a>
+      </div>
+      <div class="child" role="listitem">
+        <a class="topic-link" href="/webdesigner/topic/7665852?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Adicionar novos elementos</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/6281626?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Mover e redimensionar elementos</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7665756?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Cores, estilo e outras propriedades do elemento</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/6137390?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Gerenciar recursos com a biblioteca</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/6084733?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Agrupar e encapsular elementos</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/9346216?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Visualização de código</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/9368283?hl=pt-BR&amp;ref_topic=3227692" jslog="130287; track:click,impression">Máscaras, filtros e processamento de imagens</a></div></div></div></section><section class="parent" data-id="7003209" data-stats-idx="3,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Layout responsivo<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -340px; display: none;"><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6401225?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Páginas alternativas para diferentes orientações</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7002913?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Visão geral do layout responsivo</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7002441?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">O painel "Responsivo"</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7002914?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Gerenciar regras de mídia e substituições</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7002763?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Alinhar elementos com layout fluido</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7002995?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Redimensionar a janela de visualização</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7002636?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Animação em um layout responsivo</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/9493710?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Pontos focais para imagens responsivas</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10037008?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Visualizar documentos responsivos</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10652702?hl=pt-BR&amp;ref_topic=7003209" jslog="130286; track:click,impression">Converter um documento responsivo em um tamanho único</a></div></div></div></section><section class="parent" data-id="3181123" data-stats-idx="4,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Criar animações<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -238px; display: none;"><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6400003?hl=pt-BR&amp;ref_topic=3181123" jslog="130286; track:click,impression">Sobre as animações</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/3227054?hl=pt-BR&amp;ref_topic=3181123" jslog="130286; track:click,impression">Animação no Modo rápido</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/6065478?hl=pt-BR&amp;ref_topic=3181123" jslog="130287; track:click,impression">Modo avançado</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/3227667?hl=pt-BR&amp;ref_topic=3181123" jslog="130286; track:click,impression">Sobre easings</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6069052?hl=pt-BR&amp;ref_topic=3181123" jslog="130286; track:click,impression">Como aninhar animações</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6307672?hl=pt-BR&amp;ref_topic=3181123" jslog="130286; track:click,impression">Exibir animações em loop</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7411704?hl=pt-BR&amp;ref_topic=3181123" jslog="130286; track:click,impression">Sobre as trajetórias de animação</a></div></div></div></section><section class="parent" data-id="3181232" data-stats-idx="5,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Usar componentes<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -374px; display: none;"><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7313608?hl=pt-BR&amp;ref_topic=3181232" jslog="130286; track:click,impression">Sobre os componentes</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7313207?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Galerias</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7313119?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Interação</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/9717001?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Gráficos e efeitos</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7313208?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Maps</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7313120?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Mídia</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7313644?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Itens diversos</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/9080430?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">IU</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/9716866?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Data/hora</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/6175722?hl=pt-BR&amp;ref_topic=3181232" jslog="130287; track:click,impression">Usar componentes personalizados</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6279926?hl=pt-BR&amp;ref_topic=3181232" jslog="130286; track:click,impression">APIs de componente</a></div></div></div></section><section class="parent" data-id="6000799" data-stats-idx="6,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Adicionar eventos<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -136px; display: none;"><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6399979?hl=pt-BR&amp;ref_topic=6000799" jslog="130286; track:click,impression">Sobre os eventos</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/6056771?hl=pt-BR&amp;ref_topic=6000799" jslog="130287; track:click,impression">Configurar um evento</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/4597391?hl=pt-BR&amp;ref_topic=6000799" jslog="130286; track:click,impression">Adicionar marcadores e rótulos de evento à linha do tempo</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6000802?hl=pt-BR&amp;ref_topic=6000799" jslog="130286; track:click,impression">Criar ações personalizadas</a></div>
+        </div></div></section><section class="parent" data-id="3243982" data-stats-idx="7,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Criar um anúncio<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -170px; display: none;"><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/10762118?hl=pt-BR&amp;ref_topic=3243982" jslog="130287; track:click,impression">Tipos de anúncio</a></div><div class="child" role="listitem"><a class="topic-link" href="/webdesigner/topic/7326635?hl=pt-BR&amp;ref_topic=3243982" jslog="130287; track:click,impression">Anúncios dinâmicos</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6185261?hl=pt-BR&amp;ref_topic=3243982" jslog="130286; track:click,impression">Como usar modelos</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7375764?hl=pt-BR&amp;ref_topic=3243982" jslog="130286; track:click,impression">Validador de anúncios</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10396765?hl=pt-BR&amp;ref_topic=3243982" jslog="130286; track:click,impression">Modo fácil para modelos</a></div></div></div></section><section class="parent" data-id="10972663" data-stats-idx="8,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Criar um vídeo<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -204px; display: none;"><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10568730?hl=pt-BR&amp;ref_topic=10972663" jslog="130286; track:click,impression">Sobre anúncios em vídeo</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10966833?hl=pt-BR&amp;ref_topic=10972663" jslog="130286; track:click,impression">Faixas de áudio e vídeo</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10970068?hl=pt-BR&amp;ref_topic=10972663" jslog="130286; track:click,impression">Clipes de vídeo, áudio e imagem</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10967426?hl=pt-BR&amp;ref_topic=10972663" jslog="130286; track:click,impression">Transições de clipes de mídia</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10950113?hl=pt-BR&amp;ref_topic=10972663" jslog="130286; track:click,impression">Áudio em anúncios em vídeo</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/10886257?hl=pt-BR&amp;ref_topic=10972663" jslog="130286; track:click,impression">Variantes para anúncios em vídeo</a></div></div></div></section><section class="parent" data-id="3178447" data-stats-idx="9,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Visualizar e publicar seu trabalho<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -102px; display: none;"><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7062211?hl=pt-BR&amp;ref_topic=3178447" jslog="130286; track:click,impression">Visualizar, publicar e compartilhar documentos</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/3261497?hl=pt-BR&amp;ref_topic=3178447" jslog="130286; track:click,impression">Visualizar anúncios ou páginas HTML</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/3250387?hl=pt-BR&amp;ref_topic=3178447" jslog="130286; track:click,impression">Publicar seu trabalho</a></div></div></div></section><section class="parent" data-id="3182676" data-stats-idx="10,10" jslog="129818; track:click,impression"><h3 role="button" tabindex="0" aria-expanded="false" jslog="130285; track:click,impression">Resolver problemas comuns<svg class="up" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg><svg class="down" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path></svg></h3><div class="overflow"><div class="children" role="list" aria-hidden="true" style="margin-top: -238px; display: none;"><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/3250382?hl=pt-BR&amp;ref_topic=3182676" jslog="130286; track:click,impression">Problemas conhecidos</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7375764?hl=pt-BR&amp;ref_topic=3182676" jslog="130286; track:click,impression">Validador de anúncios</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/3546718?hl=pt-BR&amp;ref_topic=3182676" jslog="130286; track:click,impression">Usar o Google Web Designer com um servidor proxy</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/3547080?hl=pt-BR&amp;ref_topic=3182676" jslog="130286; track:click,impression">Ativação do registro detalhado de erros</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/6057545?hl=pt-BR&amp;ref_topic=3182676" jslog="130286; track:click,impression">Usar uma imagem de carregamento padrão</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7411977?hl=pt-BR&amp;ref_topic=3182676" jslog="130286; track:click,impression">Definir a porcentagem de zoom para monitores de alta resolução</a></div><div class="child" role="listitem"><a class="article-link" href="/webdesigner/answer/7639667?hl=pt-BR&amp;ref_topic=3182676" jslog="130286; track:click,impression">Desinstalar o Google Web Designer</a></div></div></div></section></nav> -->
