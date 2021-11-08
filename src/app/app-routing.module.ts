@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule, Injectable, ModuleWithProviders } from '@angular/core';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
@@ -54,7 +54,12 @@ const routes: Routes = [
   {path: 'materia/quimica', component: QuimicaComponent},
   {path: 'materia/fisica', component: FisicaComponent},
 ]
-
+// @Injectable()
+// export class SampleGuard implements CanActivate{
+//   canActivate() {
+//     return true;
+//   }
+// }
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
