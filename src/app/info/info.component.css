@@ -4,8 +4,9 @@ ngb-carousel {
 }
 
 ngb-carousel img {
-    width: 100%;
+    width: 120%;
     outline: none;
+
 }
 
 ngb-carousel {
@@ -13,33 +14,29 @@ ngb-carousel {
     height: inherit;
 }
 
-.carousel-inner {
-    overflow: visible;
+.card-title{
+font-size: 30px;
+font-family: "Times New Roman";
+
 }
 
-.carousel-item {
-    display: flex !important;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1.2s ease-in-out, visibility 1.2s;
-    z-index: -1;
+.card-text{
+font-size:  19px;
+font-family: "Times New Roman";
+
 }
 
-.carousel-item.active{
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
+.background {
+    background-color: blueviolet;
+    text-align: center;
+    align-items: center;
+  }
 
-.carousel-control-prev {
-     z-index: 20;
-}
-
-
-.carousel-control-next {
-     z-index: 20;
-}
-
-.carousel-indicators{
-    z-index: 20;
-}
+  .content {
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(
+      90deg,
+      hsla(205, 46%, 30%, 1) 0%,
+      hsla(260, 29%, 36%, 1) 100%
+    );
+  }

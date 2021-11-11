@@ -1,0 +1,215 @@
+{
+   "perguntas": [{
+            "perguntasTexto": "Quais os principais autores do Barroco no Brasil?",
+            "opcoes": [{
+                "texto": "a) Gregório de Matos, Bento Teixeira e Manuel Botelho de Oliveira",
+                "correta": true
+            },
+            {
+                "texto": "b) Miguel de Cervantes, Gregório de Matos e Danthe Alighieri"
+            },
+            {
+                "texto": "c) Padre Antônio Vieira, Padre Manuel de Melo e Gregório de Matos"
+            },
+            {
+                "texto": "d) Castro Alves, Bento Teixeira e Manuel Botelho de Oliveira"
+            },
+            {
+                "texto": "e) Álvares de Azevedo, Gregório de Matos e Bento Teixeira"
+            }
+        ],
+            "explicacao": "Gregório de Mato (1633-1696), conhecido como Boca do Inferno, é o maior representante do Barroco no Brasil. Tinha esse apelido devido às críticas sociais contidas na sua poesia. Bento Teixeira (1561-1618) é o autor do poema Prosopopeia, publicado em 1601, que é considerado o marco inicial do Barroco brasileiro. Manuel Botelho de Oliveira (1636-1711), um dos grandes representantes do Barroco, é autor do livro Música do Parnaso, publicado em Lisboa quando o autor tinha quase 70 anos. Trata-se da sua obra com maior destaque."
+
+
+        },
+        {
+            "perguntasTexto": "Quem pintou 'Guernica'?",
+            "opcoes": [{
+                "texto": "a) Paul Cézanne"
+            },
+            {
+                "texto": "b) Pablo Picasso",
+                "correta": true
+            },
+            {
+                "texto": "c) Diego Rivera"
+            },
+            {
+                "texto": "d) Tarsila do Amaral"
+            },
+            {
+                "texto": "e) Salvador Dalí"
+            }
+        ],
+            "explicacao": "Pablo Picasso (1881-1973) pintou Guernica, uma das suas obras de maior destaque, em 1937. A pintura feita em óleo sobre tela retrata o bombardeio à cidade espanhola Guernica em 26 de abril de 1937, aquando da Guerra Civil Espanhola."
+        },
+        {
+            "perguntasTexto": "O que a palavra legend significa em português?",
+            "opcoes": [{
+                "texto": "a) Legenda"
+              },
+              {
+                "texto": "b) Conto"
+              },
+              {
+                "texto": "c) História"
+              },
+              {
+                "texto": "d) Lenda",
+                "correta": true
+            },
+            {
+                "texto": "e) Legendário"
+            }
+        ],
+            "explicacao": "Legend, que parece significar “legenda”, faz parte do grupo dos falsos cognatos. Falsos cognatos são palavras de línguas distintas que apresentam semelhanças na grafia e/ou na pronúncia, mas cujos significados são diferentes. Outros exemplos são: costume, que significa fantasia, e to push, que significa empurrar."
+        },
+        {
+            "perguntasTexto": "Quais são os três predadores do reino animal reconhecidos pela habilidade de caçar em grupo, se camuflar para surpreender as presas e possuir sentidos apurados, respectivamente:",
+            "opcoes": [{
+                "texto": "a) Tubarão branco, crocodilo e sucuri"
+            },
+            {
+                "texto": "b) Tigre, gavião e orca"
+            },
+            {
+                "texto": "c) Hiena, urso branco e lobo cinzento",
+                "correta": true
+            },
+            {
+                "texto": "d) Orca, onça e tarântula"
+            },
+            {
+                "texto": "e) Leão, tubarão branco e urso cinzento"
+            }
+        ],
+            "explicacao": "A hiena é o único animal que enfrenta o leão, atacando-o quando estão em grupo. Enquanto isso, o urso branco, ou urso polar, se camufla entre o gelo do Ártico. O lobo cinzento, por sua vez, tem excelentes audição e visão noturna, características que fazem dele grandes caçadores."
+        },
+        {
+            "perguntasTexto": "Qual das alternativas abaixo apenas contêm classes de palavras?",
+            "opcoes": [{
+                "texto": "a) Vogais, semivogais e consoantes"
+              },
+              {
+                "texto": "b) Artigo, verbo transitivo e verbo intransitivo"
+              },
+              {
+                "texto": "c) Fonologia, Morfologia e Sintaxe"
+              },
+              {
+                "texto": "d) Hiatos, ditongos e tritongos"
+              },
+              {
+                "texto": "e) Substantivo, verbo e preposição",
+                "correta": true
+              }
+        ],
+            "explicacao": "Classes de palavras são palavras que se organizam de acordo com as suas funções na língua portuguesa. Existem 10 classes de palavras: substantivo, verbo, preposição, adjetivo, pronome, artigo, numeral, conjunção, interjeição e advérbio."
+        },
+        {
+            "perguntasTexto": "Qual a velocidade da luz?",
+            "opcoes": [{
+                "texto": "a) 300 000 000 metros por segundo (m/s)"
+            },
+            {
+                "texto": "b) 150 000 000 metros por segundo (m/s)"
+            },
+            {
+                "texto": "c) 199 792 458 metros por segundo (m/s)"
+            },
+            {
+                "texto": "d) 299 792 458 metros por segundo (m/s)",
+                "correta":true
+            },
+            {
+                "texto":"e) 30 000 000 metros por segundo (m/s)"
+            }
+        ],
+            "explicacao": "A primeira medição real da luz foi feita pelo astrônomo Ole Romer, que em 1676 chegou a um número próximo da velocidade da luz. Hoje, sabe-se com precisão que a velocidade da luz é 299 792 458 metros por segundo."
+        },
+        {
+            "perguntasTexto": "Atualmente, quantos elementos químicos a tabela periódica possui?",
+            "opcoes": [{
+                "texto": "a) 113"
+              },
+              {
+                "texto": "b) 109"
+              },
+              {
+                "texto": "c) 108"
+              },
+              {
+                "texto": "d) 118",
+                "correta": true
+            },
+            {
+                "texto":"e) 92"
+            }
+        ],
+            "explicacao": "Os últimos elementos foram adicionados à tabela periódica em 2016. Eles são: 113 (Nihônio), 115 (Moscóvio), 117 (Tenessino) e 118 (Oganessônio)."
+        },
+        {
+            "perguntasTexto": "Qual destes países é transcontinental?",
+            "opcoes": [{
+                "texto": "a) Rússia",
+                "correta": true
+            },
+            {
+                "texto": "b) Filipinas"
+            },
+            {
+                "texto": "c) Istambul"
+            },
+            {
+                "texto": "d) Groenlândia"
+            },
+            {
+                "texto": "e) Tanzânia"
+            }
+        ],
+            "explicacao": "A Rússia, cujo nome oficial é Federação Russa, é o maior país em extensão territorial do mundo. Essa nação é transcontinental, pois pertence a mais de um continente: Europa e Ásia."
+        },
+        {
+            "perguntasTexto": "Em que século o continente europeu foi devastado pela peste bubônica?",
+            "opcoes": [{
+                "texto": "a) No século X"
+              },
+              {
+                "texto": "b) No século XI"
+              },
+              {
+                "texto": "c) No século XII"
+              },
+              {
+                "texto": "d) No século XIII"
+              },
+              {
+                "texto": "e) No século XIV",
+                "correta": true
+            }
+        ],
+            "explicacao": "A peste bubônica, também chamada de peste negra, atingiu a população europeia no século XIV, sendo que o auge da epidemia ocorreu entre os anos de 1347 e 1353. Estima-se que ⅓ da população morreu afetada por essa doença pulmonar, ou seja, cerca de 25 milhões de pessoas."
+        },
+        {
+            "perguntasTexto": "Quantos graus são necessários para que dois ângulos sejam complementares?",
+            "opcoes": [{
+                "texto": "a) 45"
+              },
+              {
+                "texto": "b) 60"
+              },
+              {
+                "texto": "c) 90",
+                "correta": true
+            },
+            {
+                "texto": "d) 180"
+            },
+            {
+                "texto": "e) 360"
+            }
+        ],
+            "explicacao": "Os ângulos complementares são ângulos que juntos somam 90º."
+        }
+    ]
+}

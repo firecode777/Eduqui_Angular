@@ -1,5 +1,5 @@
 <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
-  <div class="card card0 border-0">
+  <mat-card class="card card0 border-0">
       <div class="row d-flex">
           <div class="col-lg-6">
               <div class="card1 pb-5">
@@ -8,31 +8,32 @@
               </div>
           </div>
           <div class="col-lg-6">
-              <div class="card2 card border-0 px-4 py-5">
+              <mat-card class="card2 card border-0 px-4 py-5">
                   <div class="row mb-4 px-3">
-                    <form>
-                      <div class="mb-3">                       
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Não compartilhe seu email com mais ninguem.</div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                      </div>
+                    <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+                      <mat-form-field>
+                        <input matInput name="email" ngModel #emailInput="ngModel" type="email" placeholder="Email"
+                        required email>
+                        <mat-error *ngIf="emailInput.invalid">Digite um email valido</mat-error>
+                      </mat-form-field>
+                      <mat-form-field>
+                        <input matInput name="password" ngModel #passwordInput="ngModel" type="password" placeholder="Senha"
+                        required>
+                        <mat-error *ngIf="passwordInput.invalid">Senha invalida</mat-error>
+                      </mat-form-field>
                       <div class="mb-3 form-check">
                       </div>
                     </form>
-                  <div class="row mb-3 px-3"> 
-                    <button type="submit" mat-raised-button color="primary"class="text-center" routerLink="/side">Login</button> 
+                  <div class="row mb-3 px-3">
+                    <button type="submit" mat-raised-button color="primary"class="text-center" routerLink="/side">Login</button>
                   </div>
                   <div class="row mb-4 px-3"> <small class="font-weight-bold">Não tem conta? <a class="text-danger" routerLink="/cadastro" >Cadastre-se</a></small> </div>
               </div>
-          </div>
+            </mat-card>
       </div>
       <div class="bg-blue py-4">
-          
+
               <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span class="fa fa-google-plus mr-4 text-sm"></span> <span class="fa fa-linkedin mr-4 text-sm"></span> <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span> </div>
           </div>
       </div>
-  </div>
+

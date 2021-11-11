@@ -32,6 +32,7 @@ import { InfoComponent } from './info/info.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { LoginComponent } from './login-cadastro/login/login.component';
 import { CadastroComponent } from './login-cadastro/cadastro/cadastro.component';
+import {ExerciciosComponent} from './exercicios/exercicios.component';
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -62,6 +63,8 @@ import { QuimicaComponent } from './materias/quimica/quimica.component';
 import { FisicaComponent } from './materias/fisica/fisica.component';
 import { LiteraturaComponent } from './materias/literatura/literatura.component';
 import { BiologiaComponent } from './materias/biologia/biologia.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { ChangeBgDirective } from './change-bg.directive';
 
 
 
@@ -74,7 +77,7 @@ import { BiologiaComponent } from './materias/biologia/biologia.component';
     VerificarEmailComponent,
     EsqueceuSenhaComponent,
     AdminDashboardComponent,
-   
+    ExerciciosComponent,
     InfoComponent,
     AjudaComponent,
     MateriaPageComponent,
@@ -91,8 +94,10 @@ import { BiologiaComponent } from './materias/biologia/biologia.component';
     BiologiaComponent,
     LoginComponent,
     CadastroComponent,
-    
-   
+    QuizComponent,
+    ChangeBgDirective,
+
+
   ],
   imports: [
     BrowserModule,
@@ -128,8 +133,8 @@ import { BiologiaComponent } from './materias/biologia/biologia.component';
     IvyCarouselModule,
     NgbModule,
     DragDropModule,
-    
-   
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

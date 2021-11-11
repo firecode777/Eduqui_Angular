@@ -6,6 +6,10 @@ body {
   background-repeat: no-repeat
 }
 
+mat-form-field {
+  width: 100%;
+}
+
 .card0 {
   box-shadow: 0px 4px 8px 0px #757575;
   border-radius: 0px
@@ -31,38 +35,7 @@ body {
   border-right: 1px solid #EEEEEE
 }
 
-.facebook {
-  background-color: #3b5998;
-  color: #fff;
-  font-size: 18px;
-  padding-top: 5px;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  cursor: pointer
-}
 
-.twitter {
-  background-color: #1DA1F2;
-  color: #fff;
-  font-size: 18px;
-  padding-top: 5px;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  cursor: pointer
-}
-
-.linkedin {
-  background-color: #2867B2;
-  color: #fff;
-  font-size: 18px;
-  padding-top: 5px;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  cursor: pointer
-}
 
 .line {
   height: 1px;
