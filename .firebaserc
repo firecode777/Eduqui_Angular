@@ -6,9 +6,16 @@
           "eduqui-7444d"
         ]
       }
+    },
+    "eduquifirebase-eb45e": {
+      "hosting": {
+        "eduqui-dois": [
+          "eduquifirebase-eb45e"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "eduqui-7444d"
+    "default": "eduquifirebase-eb45e"
   }
 }

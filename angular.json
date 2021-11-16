@@ -34,7 +34,6 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
-              
             ],
             "scripts": []
           },
@@ -112,8 +111,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "eduqui-dois:build:production",
-            "firebaseProject": "eduqui-7444d",
-            "firebaseHostingSite": "eduqui-7444d"
+            "firebaseProject": "eduquifirebase-eb45e",
+            "firebaseHostingSite": "eduquifirebase-eb45e"
           }
         }
       }

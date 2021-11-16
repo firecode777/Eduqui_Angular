@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AuthService } from 'src/app/services/auth.service'
 // Router
 import { AppRoutingModule } from './app-routing.module';
 // Firebase
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideAuth,getAuth, } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
 // Layout
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -65,6 +67,8 @@ import { LiteraturaComponent } from './materias/literatura/literatura.component'
 import { BiologiaComponent } from './materias/biologia/biologia.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ChangeBgDirective } from './change-bg.directive';
+import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+import { TENANT_ID } from '@angular/fire/compat/auth';
 
 
 
@@ -133,10 +137,12 @@ import { ChangeBgDirective } from './change-bg.directive';
     IvyCarouselModule,
     NgbModule,
     DragDropModule,
+    provideMessaging(() => getMessaging()),
 
 
   ],
-  providers: [],
+  providers: [AuthService, { provide: TENANT_ID, useValue: 'tenant-id-app-one', multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

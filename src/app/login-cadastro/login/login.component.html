@@ -12,18 +12,25 @@
                   <div class="row mb-4 px-3">
                     <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
                       <mat-form-field>
-                        <input matInput name="email" ngModel #emailInput="ngModel" type="email" placeholder="Email"
-                        required email>
+                        <input matInput name="username" ngModel #emailInput="ngModel" type="username" placeholder="E-mail" [(ngModel)]="username"
+                        required username>
                         <mat-error *ngIf="emailInput.invalid">Digite um email valido</mat-error>
                       </mat-form-field>
                       <mat-form-field>
-                        <input matInput name="password" ngModel #passwordInput="ngModel" type="password" placeholder="Senha"
+                        <input matInput name="password" ngModel #passwordInput="ngModel" type="password" placeholder="Senha" [(ngModel)]="password"
                         required>
                         <mat-error *ngIf="passwordInput.invalid">Senha invalida</mat-error>
                       </mat-form-field>
                       <div class="mb-3 form-check">
                       </div>
+                      
                     </form>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" value="" id="remember">
+                      <label for="remember" class="form-check-label">
+                      Remember me
+                    </label>
+                    </div>
                   <div class="row mb-3 px-3">
                     <button type="submit" mat-raised-button color="primary"class="text-center" routerLink="/side">Login</button>
                   </div>

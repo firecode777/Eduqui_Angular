@@ -3,7 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
-
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -18,8 +19,8 @@ export class NavComponent {
     );
   useDefault!: boolean;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
+  constructor(private breakpointObserver: BreakpointObserver ) {}
+  // private authService: AuthService, private router: Router
   private escuro = false
 
   toggle(event: MatSlideToggleChange) {
@@ -32,7 +33,12 @@ export class NavComponent {
       this.escuro = false
     }
   }
-  
+  // // logout(){
+  // //   this.authService.logout();
+  // //   this.router.navigate(["/login"]);
+
+
+  // }
 
   @HostBinding('class') get themeMode() {
     return this.escuro ? 'tema-escuro' : 'tema-claro';

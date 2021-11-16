@@ -1,11 +1,11 @@
 export const environment = {
   firebase: {
-    projectId: 'eduqui-7444d',
-    appId: '1:1027130101406:web:a0ab1fabddf7c22486758f',
-    storageBucket: 'eduqui-7444d.appspot.com',
-    apiKey: 'AIzaSyDwz5K33ImIf4PcZM16BvSivafYTI-LaME',
-    authDomain: 'eduqui-7444d.firebaseapp.com',
-    messagingSenderId: '1027130101406',
+    projectId: 'eduquifirebase-eb45e',
+    appId: '1:306663263679:web:5c5051302e67eea4ba650a',
+    storageBucket: 'eduquifirebase-eb45e.appspot.com',
+    apiKey: 'AIzaSyD93Sa5MjnQf1w2z_EEy2Q5dTAPt5eSZYg',
+    authDomain: 'eduquifirebase-eb45e.firebaseapp.com',
+    messagingSenderId: '306663263679',
   },
   production: true
 };
