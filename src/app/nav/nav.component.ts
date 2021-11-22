@@ -3,7 +3,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
-import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav',

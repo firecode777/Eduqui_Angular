@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-verificar-email',
@@ -10,6 +11,9 @@ export class VerificarEmailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onPublicar(form: NgForm){
 
   }
 

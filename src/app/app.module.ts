@@ -60,6 +60,7 @@ import { LiteraturaComponent } from './materias/literatura/literatura.component'
 import { BiologiaComponent } from './materias/biologia/biologia.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ChangeBgDirective } from './change-bg.directive';
+import { ForumComponent } from './forum/forum.component';
 
 
 
@@ -91,6 +92,7 @@ import { ChangeBgDirective } from './change-bg.directive';
     CadastroComponent,
     QuizComponent,
     ChangeBgDirective,
+    ForumComponent,
 
 
   ],
