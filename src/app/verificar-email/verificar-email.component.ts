@@ -10,6 +10,7 @@ export class VerificarEmailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
