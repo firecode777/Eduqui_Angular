@@ -21,7 +21,6 @@ import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { MateriaPageComponent } from './materia-page/materia-page.component';
 import { InfoComponent } from './info/info.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
@@ -60,7 +59,6 @@ import { LiteraturaComponent } from './materias/literatura/literatura.component'
 import { BiologiaComponent } from './materias/biologia/biologia.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ChangeBgDirective } from './change-bg.directive';
-import { ForumComponent } from './forum/forum.component';
 
 
 
@@ -72,7 +70,6 @@ import { ForumComponent } from './forum/forum.component';
     PerfilComponent,
     VerificarEmailComponent,
     EsqueceuSenhaComponent,
-    AdminDashboardComponent,
     ExerciciosComponent,
     InfoComponent,
     AjudaComponent,
@@ -92,7 +89,6 @@ import { ForumComponent } from './forum/forum.component';
     CadastroComponent,
     QuizComponent,
     ChangeBgDirective,
-    ForumComponent,
 
 
   ],

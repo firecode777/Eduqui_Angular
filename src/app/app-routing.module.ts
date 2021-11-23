@@ -6,7 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import {AjudaComponent} from './ajuda/ajuda.component';
 import {InfoComponent} from './info/info.component';
 import {MateriaPageComponent} from './materia-page/materia-page.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
   {path: 'perfil', component: PerfilComponent},
   {path: 'nav', component: NavComponent},
   {path: 'materia', component: MateriaPageComponent},
-  {path: 'admin', component: AdminDashboardComponent, },
   {path: 'cadastro', component: CadastroComponent},
   {path: 'verificar-email', component: VerificarEmailComponent},
   {path: 'esqueceu-senha', component: EsqueceuSenhaComponent},
