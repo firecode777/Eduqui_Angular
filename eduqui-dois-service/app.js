@@ -1,46 +1,59 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-const moongose = require('moongose');
+const express = require ('express');
+const app = express();
+const bodyParser = require ('body-parser');
+app.use (bodyParser.json());
+const mongoose = require ('mongoose');
 
-// moongose.connect(mongodb+srv:Lelis_card:<ecoeco11>@cluster0.hxulc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority);
+const Postagem = require('./models/postagem')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var cors = require('cors');
+mongoose.connect('mongodb+srv://leonardo:leonardo@cluster0.kiw4k.mongodb.net/postagem?retryWrites=true&w=majority').then(() => {
+  console.log ("Conexão OK")
+  }).catch(() => {
+  console.log("Conexão NOK")
+  });
 
-var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+const postagens = [
+  {
+  id: '1',
+  titulo: 'Jose',
+  conteudo: 'seno e cosseno'
+  },
+  {
+  id: '2',
+  titulo: 'Jaqueline',
+  conteudo: 'adição, subtração'
+  }
+  ]
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+  app.use ((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', "*");
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE,OPTIONS');
+    next();
+    });
 
-app.use(cors());
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+    app.post ('/api/postagens', (req, res, next) => {
+      const postagem = new Postagem({
+      titulo: req.body.titulo,
+      conteudo: req.body.conteudo
+      })
+      postagem.save().then (postagemInserida => {
+        res.status(201).json({
+        mensagem: 'Cliente inserido',
+        id: postagemInserida._id
+        })
+        })
+      });
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+  app.get('/api/postagens', (req, res, next) => {
+    Postagem.find().then(documents => {
+      console.log (documents)
+      res.status(200).json({
+      mensagem: "Tudo OK",
+      postagens: documents
+      });
+    })
+  });
 
 module.exports = app;

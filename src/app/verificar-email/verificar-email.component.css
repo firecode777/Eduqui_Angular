@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    position: relative;
+    padding: 0 100px;
+    min-height: 100vh;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+    height: 20%;
+    background: #000;
+    z-index: -2;
+    animation: crescer 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes crescer {
+    0%{
+        height: 20%
+    }
+    30%, 100%{
+        height: 50%;
+        width: clamp(100px, 25%, 500px);
+    }
+    100%{
+        height: 100%;
+        background: #333;
+    }
+}
+
+.container::after{
+    content: 'Educação';
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    font-size: 13vw;
+    z-index: -2;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.04;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+header .logo {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;   
+}
+
+header .logo span {
+    color: rgb(98, 36, 156)
+}
+
+.content{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.content .bannerText {
+    position: relative;
+    width: clamp(100px, 50%, 600px);
+    margin-right: 50px;
+}
+
+.content .bannerText h2{
+    font-size: clamp(20px, 54px, 60px);
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2em;
+    
+}
+
+.content .bannerText p {
+    font-size: clamp(15px, 18px, 20px);
+    line-height: clamp(1em, 1.8em, 2em);
+}
+
+.content .bannerText button {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.content .bannerText button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    color: rgb(98, 36, 156);
+    z-index: -1;
+    transition: 0.5s ease-in-out
+}
+
+.container .bannerImg img{
+  
+    width: clamp(30%, 50%, 80%);
+    object-fit: cover;
+    transition: 0.5s
+}
+/* Postagem */
+
+
+mat-card button.button {
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    width: 50%;
+    bottom: 0;
+    margin-top: 20px;
+    left: -15px;
+    background: rgb(40, 40, 117);
+  }
+  
+  mat-form-field {
+    width: 70%;
+    position: relative;
+    top: 4.5em;
+    
+  }
+  
+ mat-card{
+    width:95%;
+    height: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s;
+    position: relative;
+    margin: 15px;
+
+ }
+  
+  mat-card .circulo {
+    position: absolute;
+    background: rgb(40, 40, 117);
+    width: 40%;
+    height: 100vh;
+    transform: translate(170%);
+    clip-path: circle(200px at center 0);
+    top: 0;
+    left: 0;
+    right: 15px;
+  }
+  
+  mat-option{
+    background: rgb(27, 27, 27);
+    color:#fff
+  }
+  
+/* Posts */
+
+mat-accordion{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+}
+
+.conteiner{
+    width: 300px;
+    justify-content:space-between;
+    display: flex;
+}
+
+.conteiner .postagem {
+    position : relative;
+    width: 320px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);   
+    overflow: hidden
+}
+
